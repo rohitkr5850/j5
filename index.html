@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flex and Grid Layout</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      display: grid;
+      grid-template-areas:
+        "box1 box2 box3"
+        "box4 box5 box6"
+        "box7 box7 box7";
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+      gap: 10px;
+      height: 100vh;
+      padding: 10px;
+      box-sizing: border-box;
+    }
+
+    .box {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px;
+      border-radius: 8px;
+      color: white;
+      font-weight: bold;
+    }
+
+    .box1 {
+      grid-area: box1;
+      background: linear-gradient(45deg, #ff7eb3, #ff758f);
+    }
+
+    .box2 {
+      grid-area: box2;
+      background: linear-gradient(45deg, #8eb3ff, #7a9dff);
+    }
+
+    .box3 {
+      grid-area: box3;
+      background: linear-gradient(45deg, #78ffc8, #51ff9f);
+    }
+
+    .box4 {
+      grid-area: box4;
+      background: linear-gradient(45deg, #ffcf5b, #ff9f43);
+    }
+
+    .box5 {
+      grid-area: box5;
+      background: linear-gradient(45deg, #ff7eb3, #ff758f);
+    }
+
+    .box6 {
+      grid-area: box6;
+      background: linear-gradient(45deg, #8eb3ff, #7a9dff);
+    }
+
+    .box7 {
+      grid-area: box7;
+      background: linear-gradient(45deg, #78ffc8, #51ff9f);
+    }
+
+    .line {
+      height: 5px;
+      width: 60%;
+      background-color: white;
+      margin: 5px 0;
+      border-radius: 3px;
+    }
+
+    .circle {
+      width: 20px;
+      height: 20px;
+      background-color: white;
+      border-radius: 50%;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="box box1">
+      <div class="line"></div>
+      <div class="circle"></div>
+    </div>
+    <div class="box box2">
+      <div class="line"></div>
+      <div class="circle"></div>
+    </div>
+    <div class="box box3">
+      <div class="circle"></div>
+      <div class="circle"></div>
+    </div>
+    <div class="box box4">
+      <div class="circle"></div>
+      <div class="line"></div>
+    </div>
+    <div class="box box5">
+      <div class="line"></div>
+      <div class="circle"></div>
+    </div>
+    <div class="box box6">
+      <div class="line"></div>
+      <div class="circle"></div>
+    </div>
+    <div class="box box7">
+      <div class="circle"></div>
+      <div class="circle"></div>
+    </div>
+  </div>
+</body>
+</html>
